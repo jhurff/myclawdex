@@ -59,11 +59,19 @@ For a graphical interface to interact with your local Ollama models, you can ins
     # npm install --force
     npm run build
     ```
-4.  **Run the Web UI:**
+4.  **Run the Web UI (using the backend script):**
+    After building the frontend, the Ollama Web UI (now Open WebUI) typically runs by starting its backend server.
     ```bash
-    npm start
+    # Navigate back to the main directory of the cloned repository if you're in 'ollama-webui/backend'
+    cd ..
+
+    # Run the backend script. Note: This path might vary slightly based on updates to the repository.
+    # It's always best to consult the official Open WebUI GitHub repository for the latest instructions.
+    ./backend/start.sh
     ```
     The Web UI will typically be accessible in your browser at `http://localhost:8080` (or another port if specified). Ensure your Ollama server (`ollama serve`) is running in the background.
+
+    **Note:** If `start.sh` is not found or fails, please check the official [Open WebUI GitHub repository](https://github.com/open-webui/open-webui) for the most current instructions on how to run the built application.
 
 ### Step 2: Set Up Your VS Code Environment
 
