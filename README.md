@@ -15,19 +15,17 @@ Follow these steps to set up your local AI development environment.
 
 ### Prerequisites
 
-*   **Ollama:** Ensure you have Ollama installed. If not, follow the official Ollama installation guide.
+*   **Ollama:** Follow the official Ollama installation guide for your operating system: [https://ollama.com/download](https://ollama.com/download). For Linux, you can typically use:
     ```bash
-    # Example (check official docs for latest)
     curl -fsSL https://ollama.com/install.sh | sh
     ```
 *   **VS Code:** Download and install Visual Studio Code.
 *   **Python:** Python 3.8+ is recommended.
 
-### Step 1: Install and Configure Ollama
+### Step 1: Configure Ollama
 
-1.  **Install Ollama:** If you haven't already, install Ollama.
+1.  **Verify Ollama Installation:** After installation, verify it's working:
     ```bash
-    # Verify installation
     ollama --version
     ```
 2.  **Download a Local Model:** Use Ollama to download a compatible model. For this example, we'll use a local large language model (LLM). You can explore available models with `ollama list`.
