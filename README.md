@@ -68,7 +68,7 @@ For a graphical interface to interact with your local Ollama models, you can ins
     cd ollama-webui/backend
     python3 -m venv .venv_webui
     source .venv_webui/bin/activate # On Windows: .venv_webui\Scripts\activate
-    pip install uvicorn
+    pip install uvicorn typer "python-multipart"
     ```
     **Then, navigate back and run the start script:**
     ```bash
