@@ -41,6 +41,27 @@ Follow these steps to set up your local AI development environment.
     ```
 3.  **Start Ollama Server:** Ollama runs as a background server. Ensure it's running before interacting with models. You can often start it by just running `ollama serve` in a terminal or ensuring the Ollama application is running in your system tray.
 
+### Optional: Ollama Web UI Installation
+
+For a graphical interface to interact with your local Ollama models, you can install the Ollama Web UI. This is a separate project and provides a chat-like interface.
+
+1.  **Install Node.js (if not already installed):** The Ollama Web UI requires Node.js. Refer to the official Node.js website for installation instructions.
+2.  **Clone the Ollama Web UI Repository:**
+    ```bash
+    git clone https://github.com/ollama-webui/ollama-webui.git
+    cd ollama-webui
+    ```
+3.  **Install Dependencies and Build:**
+    ```bash
+    npm install
+    npm run build
+    ```
+4.  **Run the Web UI:**
+    ```bash
+    npm start
+    ```
+    The Web UI will typically be accessible in your browser at `http://localhost:8080` (or another port if specified). Ensure your Ollama server (`ollama serve`) is running in the background.
+
 ### Step 2: Set Up Your VS Code Environment
 
 1.  **Install VS Code Extensions:**
@@ -81,7 +102,7 @@ def get_local_llm_response(prompt: str, model_name: str = "llama3.1"):
     except Exception as e:
         return f"Error interacting with local Ollama model: {e}"
 
-if __name__ == "__main__":
+if __name__ == "__main":
     user_prompt = "Explain the concept of quantum entanglement in simple terms."
     print(f"Prompt: {user_prompt}
 ")
