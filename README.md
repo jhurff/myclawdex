@@ -54,6 +54,9 @@ For a graphical interface to interact with your local Ollama models, you can ins
 3.  **Install Dependencies and Build:**
     ```bash
     npm install
+    # If you encounter ERESOLVE errors, try:
+    # npm install --legacy-peer-deps
+    # npm install --force
     npm run build
     ```
 4.  **Run the Web UI:**
