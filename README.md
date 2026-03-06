@@ -60,18 +60,27 @@ For a graphical interface to interact with your local Ollama models, you can ins
     npm run build
     ```
 4.  **Run the Web UI (using the backend script):**
-    After building the frontend, the Ollama Web UI (now Open WebUI) typically runs by starting its backend server.
+    After building the frontend, the Open WebUI (formerly Ollama Web UI) typically runs by starting its backend server. It's important to run this script with `bash` as some shell features (`${VAR,,}`) might not be compatible with `sh`.
+
+    **First, ensure Python dependencies for the backend are installed in a virtual environment:**
     ```bash
-    # Navigate back to the main directory of the cloned repository if you're in 'ollama-webui/backend'
+    # Navigate to the backend directory within the cloned repository
+    cd ollama-webui/backend
+    python -m venv .venv_webui
+    source .venv_webui/bin/activate # On Windows: .venv_webui\Scripts\activate
+    pip install uvicorn "python-multipart<0.0.0,>=0.0.0" # Ensure python-multipart is compatible
+    ```
+    **Then, navigate back and run the start script:**
+    ```bash
+    # Navigate back to the main directory of the cloned repository
     cd ..
 
-    # Run the backend script. Note: This path might vary slightly based on updates to the repository.
-    # It's always best to consult the official Open WebUI GitHub repository for the latest instructions.
-    ./backend/start.sh
+    # Run the backend script using bash
+    bash ./backend/start.sh
     ```
     The Web UI will typically be accessible in your browser at `http://localhost:8080` (or another port if specified). Ensure your Ollama server (`ollama serve`) is running in the background.
 
-    **Note:** If `start.sh` is not found or fails, please check the official [Open WebUI GitHub repository](https://github.com/open-webui/open-webui) for the most current instructions on how to run the built application.
+    **Note:** If `start.sh` is not found, fails, or you encounter "bad substitution" errors, please check the official [Open WebUI GitHub repository](https://github.com/open-webui/open-webui) for the most current instructions and potential updates to the `start.sh` script or its required execution environment.
 
 ### Step 2: Set Up Your VS Code Environment
 
