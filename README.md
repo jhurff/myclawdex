@@ -68,7 +68,7 @@ For a graphical interface to interact with your local Ollama models, you can ins
     cd ollama-webui/backend
     python3 -m venv .venv_webui
     source .venv_webui/bin/activate # On Windows: .venv_webui\Scripts\activate
-    pip install uvicorn typer "python-multipart" "typing_extensions" "pydantic"
+    pip install "uvicorn[standard]" typer "python-multipart" "typing_extensions" "pydantic" "opentelemetry-api" "opentelemetry-sdk"
     ```
     **Then, navigate back and run the start script:**
     ```bash
