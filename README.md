@@ -62,7 +62,23 @@ For a graphical interface to interact with your local Ollama models, you can ins
 4.  **Run the Web UI (using the backend script):**
     After building the frontend, the Open WebUI (formerly Ollama Web UI) typically runs by starting its backend server. It's important to run this script with `bash` as some shell features (`${VAR,,}`) might not be compatible with `sh`.
 
-    **First, ensure Python dependencies for the backend are installed in a virtual environment:**
+    **First, install system-level audio development libraries (for `pydub`):**
+    *   **For macOS (using Homebrew):**
+        ```bash
+        brew install portaudio ffmpeg
+        ```
+    *   **For Debian/Ubuntu Linux:**
+        ```bash
+        sudo apt-get update
+        sudo apt-get install ffmpeg libsndfile1 portaudio19-dev
+        ```
+    *   **For Fedora/RHEL Linux:**
+        ```bash
+        sudo dnf install ffmpeg-devel portaudio-devel
+        ```
+    *   **For Windows:** You may need to manually install FFmpeg and set up its path, or use a package manager like Chocolatey. `pyaudioop` is often provided by a pre-built wheel for Windows when `pip install pydub` is run after FFmpeg is available.
+
+    **Then, ensure Python dependencies for the backend are installed in a virtual environment:**
     ```bash
     # Navigate to the backend directory within the cloned repository
     cd ollama-webui/backend
