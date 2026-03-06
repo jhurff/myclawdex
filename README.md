@@ -15,10 +15,12 @@ Follow these steps to set up your local AI development environment.
 
 ### Prerequisites
 
-*   **Ollama:** Follow the official Ollama installation guide for your operating system: [https://ollama.com/download](https://ollama.com/download). For Linux, you can typically use:
-    ```bash
-    curl -fsSL https://ollama.com/install.sh | sh
-    ```
+*   **Ollama:** Follow the official Ollama installation guide for your operating system: [https://ollama.com/download](https://ollama.com/download).
+    *   **For macOS/Linux:** You can typically use:
+        ```bash
+        curl -fsSL https://ollama.com/install.sh | sh
+        ```
+    *   **For Windows:** Download and run the installer from the Ollama website.
 *   **VS Code:** Download and install Visual Studio Code.
 *   **Python:** Python 3.8+ is recommended.
 
@@ -72,7 +74,10 @@ For a graphical interface to interact with your local Ollama models, you can ins
     mkdir my-ai-project
     cd my-ai-project
     python -m venv .venv
-    source .venv/bin/activate  # On Windows: .venv\Scripts\activate
+    # On macOS/Linux:
+    source .venv/bin/activate
+    # On Windows:
+    .venv\Scripts\activate
     ```
 
 3.  **Install Required Libraries:** You'll need the `ollama` Python library to interact with your local Ollama server.
